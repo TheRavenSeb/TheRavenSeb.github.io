@@ -1,0 +1,283 @@
+* {
+    font-family: 'Courier New', 'Courier New', Courier, monospace;
+}
+
+:root {
+    --background: #f7f7f7cb;      /* Light gray background */
+    --primary-bg: #ffffff;      /* White for form backgrounds */
+    --primary-text: #000000;     /* Dark gray text */
+    --heading-text: #ffffff;     /* Almost black for headers */
+    --border-color: #dddddd;     /* Light border color */
+    --accent-color: #000000;     /* Muted blue for highlights */
+    --button-bg: #A49E8D;        /* Muted blue button color */
+    --button-hover-bg: #868275 ;  /* Slightly darker blue for hover */
+    --button-disabled-bg: #b4c6e7; /* Disabled button */
+    --alert-color: #b93902;      /* Alert red */
+    --error-color: #a94442;      /* Error red */
+    --border-radius: 4px;        /* Rounded borders */
+}
+
+#courtForm {
+    display: block;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    color: var(--primary-text);
+}
+
+#top-bar {
+    background-color: #2f2f2f;   /* Dark gray for the top bar */
+    color: #ffffff;              /* White text */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#subtitle-bar {
+    background-color: #ffffff;   /* Dark gray for subtitle */
+    color: #ffffff;              /* White text */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#title {
+    background-color: #000000; /* Dark gray for the main title */
+    color: var(--heading-text);
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+/* Form container */
+.form-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--primary-bg);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: block;        /* Ensure form fields remain block-level */
+    text-align: left;      /* Keep labels and inputs left-aligned */
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-bg);
+    font-size: 1rem;
+    color: var(--primary-text);
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px 3px rgba(76, 106, 146, 0.2);
+}
+
+/* Textarea for longer input */
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Select dropdown styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-bg);
+    color: rgb(0, 0, 0);
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: var(--border-radius); 
+    border-radius: 100vw; 
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#submit {
+    display: block;
+    margin: 1rem auto;      /* Center the button */
+    padding: 1rem 5rem;     /* Adjust padding as needed */
+}
+
+.nav-bar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 10px 10px; 
+    gap: 30px; 
+}
+
+/* Button hover state */
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Button active state */
+button:active {
+    background-color: var(--button-bg);
+}
+
+/* Disabled state for buttons */
+button:disabled {
+    background-color: var(--button-disabled-bg);
+    cursor: not-allowed;
+}
+
+/* Sticky classification banner */
+.classification-banner {
+    background-color: var(--alert-color);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Form section borders */
+.form-section {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-bg);
+}
+
+/* Required field marker */
+.required-field::after {
+    content: "*";
+    color: var(--alert-color);
+    margin-left: 4px;
+}
+
+/* Gradient border (if needed) */
+.gradient-border {
+    position: relative;
+    padding: 3px;
+    border-radius: 9px;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #4c6a92, #444444);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+}
+
+/* Alert and error messages */
+.alert,
+.error {
+    background-color: var(--alert-color);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.error {
+    background-color: var(--error-color);
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--button-bg);
+    color: var(--heading-text);
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--button-hover-bg);
+}
+
+button[type="submit"]:disabled {
+    background-color: var(--button-disabled-bg);
+    cursor: not-allowed;
+}
+
+/* Center the submit button */
+.submit-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

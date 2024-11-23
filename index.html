@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Military Personnel Report System</title>
+</head>
+<body>
+    <div class="classification-banner">
+        FOR REAPER SQUAD USE ONLY - Network for Event and Incident Systemization
+    </div>
+    <h1 id="title">NEXUS</h1>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <button id="pirsButton">PIRS</button>
+        <button id="courtButton">Court</button>
+        <button id="arrButton">After Action Report (A.R.R)</button>
+    </div>
+
+    <!-- Personnel Incident Report Form -->
+    <div class="form-container" id="complaintFormContainer">
+        <form id="complaintForm">
+            <div class="form-group">
+                <label for="officerSelect">Select Officer:</label>
+                <select id="officerSelect" name="officerSelect" required>
+                    <option value="">-- Select an Officer --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="misconductType">Type of Misconduct:</label>
+                <select id="misconductType" name="misconductType" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="Excessive Force">Excessive Force</option>
+                    <option value="Racial Discrimination">Racial Discrimination</option>
+                    <option value="Sexual Misconduct">Sexual Misconduct</option>
+                    <option value="Verbal Abuse">Verbal Abuse</option>
+                    <option value="Abuse of Power">Abuse of Power</option>
+                    <option value="Corruption">Corruption</option>
+                    <option value="Negligence">Negligence</option>
+                    <option value="other">Other (Specify)</option>
+                </select>
+                <input type="text" id="otherMisconductType" name="otherMisconductType" 
+                       placeholder="Please specify the type of misconduct" 
+                       style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="incidentDate">Date of Incident:</label>
+                <input type="datetime-local" id="incidentDate" name="incidentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location of Incident:</label>
+                <input type="text" id="location" name="location" required 
+                       placeholder="e.g., Police Station, Street Address, or Area">
+            </div>
+            <div class="form-group">
+                <label for="witnesses">Witnesses (if any):</label>
+                <input type="text" id="witnesses" name="witnesses" 
+                       placeholder="Names or descriptions of any witnesses">
+            </div>
+            <div class="form-group">
+                <label for="complaint">Detailed Description:</label>
+                <textarea id="complaint" name="complaint" required 
+                          placeholder="Please provide a detailed description of the incident, including what happened, when it happened, and any other relevant information."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="evidence">Evidence (if any):</label>
+                <textarea id="evidence" name="evidence" 
+                          placeholder="Describe any evidence you have (screenshots, recordings, etc.)"></textarea>
+            </div>
+
+            <!-- Submit Button Wrapper -->
+            <div class="submit-btn-wrapper">
+                <button type="submit">Submit Report</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Court Report Form -->
+    <div class="form-container" id="courtFormContainer" style="display: none;">
+        <form id="courtForm">
+            <div class="form-group">
+                <label for="courtPlaintiffSelect">Select Plaintiff:</label>
+                <select id="courtPlaintiffSelect" name="courtPlaintiffSelect" required>
+                    <option value="">-- Select a Plaintiff --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preferredDefendantSelect">Preferred Defendant:</label>
+                <select id="preferredDefendantSelect" name="preferredDefendantSelect" required>
+                    <option value="">-- Select a Defendant --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="courtType">Type of Court:</label>
+                <select id="courtType" name="courtType" required>
+                    <option value="">-- Select Court Type --</option>
+                    <option value="Civil">Summary</option>
+                    <option value="Criminal">Special</option>
+                    <option value="Family">General</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="scheduledCourtTime">Scheduled Court Time:</label>
+                <input type="datetime-local" id="scheduledCourtTime" name="scheduledCourtTime" required>
+            </div>
+            <div class="form-group">
+                <label for="courtIncidentDate">Date of Incident:</label>
+                <input type="datetime-local" id="courtIncidentDate" name="courtIncidentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="courtLocation">Location of Incident:</label>
+                <input type="text" id="courtLocation" name="courtLocation" required 
+                       placeholder="e.g., Court Address or Area">
+            </div>
+            <div class="form-group">
+                <label for="courtWitnesses">Witnesses (if any):</label>
+                <input type="text" id="courtWitnesses" name="courtWitnesses" 
+                       placeholder="Names or descriptions of any witnesses">
+            </div>
+            <div class="form-group">
+                <label for="courtDescription">Detailed Description:</label>
+                <textarea id="courtDescription" name="courtDescription" required 
+                          placeholder="Please provide a detailed description of the incident, including what happened, when it happened, and any other relevant information."></textarea>
+            </div>
+
+            <!--ARR After Action Report form-->
+            <div class="form-container" id="arrFormContainer" style="display: none;">
+        <form id="arrForm">
+            <div class="form-group">
+                <label for="TrainerSelect">Select Lead Trainer:</label>
+                <select id="TrainerSelect" name="TrainerSelect" required>
+                    <option value="">-- Select an Trainer --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="arrIncidentType">Type of Event:</label>
+                <select id="arrIncidentType" name="arrIncidentType" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="Basic Training">Basic Training</option>
+                    <option value="Training Exercise">Training Exercise</option>
+                    <option value="Combat Operation">Combat Operation</option>
+                    <option value="Humanitarian Mission">Humanitarian Mission</option>
+                    <option value="Other">Other (Specify)</option>
+                </select>
+                <input type="text" id="arrOtherIncidentType" name="OtherIncidentType" 
+                       placeholder="Please specify the type of incident" 
+                       style="display: none;">
+            </div>
+            <div class="form-group">
+                <label for="arrIncidentDate">Date of Event:</label>
+                <input type="datetime-local" id="arrIncidentDate" name="arrIncidentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="arrLocation">Location of Event (Maps):</label>
+                <input type="text" id="arrLocation" name="arrLocation" required 
+                       placeholder="e.g., Training Ground, Combat Zone, or Area">
+            </div>
+            <div class="form-group">
+                <label for="Witnesses">Attending Members</label>
+                <input type="text" id="Witnesses" name="Witnesses" 
+                       placeholder="Names of Attending users">
+            </div>
+            <div class="form-group">
+                <label for="arrDescription">Detailed Description:</label>
+                <textarea id="arrDescription" name="arrDescription" required 
+                          placeholder="Please provide a detailed description of the Event, including what happened, when it happened, and any other relevant information. (Service hours)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Outcome">Outcome:</label>
+                <textarea id="Outcome" name="Outcome" 
+                          placeholder="Describe the outcome of the Event and any issues if any"></textarea>
+            </div>
+
+
+
+            <!-- Submit Button Wrapper -->
+            <div class="submit-btn-wrapper">
+                <button type="submit">Submit Court Report</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

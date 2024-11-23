@@ -73,7 +73,9 @@ function loadOfficers() {
             defendantOption.textContent = officer.name;
             defendantSelect.appendChild(defendantOption);
         }
+        
     });
+    return console.log(`Loaded ${OFFICERS.length} officers into dropdown`);
 }
 // load trainers into dropdown
 function loadTrainers() {
@@ -115,8 +117,9 @@ document.getElementById('misconductType').addEventListener('change', function() 
 
 // Set up form when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    loadOfficers();
-    loadTrainers();
+    loadOfficers().then( () => {
+
+    loadTrainers();});
     
     // Set default datetime to now
     const now = new Date();
@@ -446,11 +449,13 @@ document.getElementById('arrForm').addEventListener('submit', async (e) => {
 document.getElementById('pirsButton').addEventListener('click', function() {
     document.getElementById('complaintFormContainer').style.display = 'block';
     document.getElementById('courtFormContainer').style.display = 'none';
+    document.getElementById('arrFormContainer').style.display = 'none';
 });
 
 document.getElementById('courtButton').addEventListener('click', function() {
     document.getElementById('complaintFormContainer').style.display = 'none';
     document.getElementById('courtFormContainer').style.display = 'block';
+    document.getElementById('arrFormContainer').style.display = 'none';
 });
 
 document.getElementById('arrButton').addEventListener('click', function() {

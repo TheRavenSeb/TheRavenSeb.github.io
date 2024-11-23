@@ -344,8 +344,8 @@ document.getElementById('arrForm').addEventListener('submit', async (e) => {
     submitButton.textContent = 'Submitting...';
 
     const trainerData = JSON.parse(document.getElementById('TrainerSelect').value);
-    const misconductType = document.getElementById('arrMisconductType').value;
-    const otherMisconductType = document.getElementById('arrOtherMisconductType').value;
+    const misconductType = document.getElementById('arrIncidentType').value;
+    const otherMisconductType = document.getElementById('arrOtherIncidentType').value;
 
     try {
 

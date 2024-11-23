@@ -368,7 +368,7 @@ document.getElementById('arrForm').addEventListener('submit', async (e) => {
                     inline: false
                 },
                 {
-                    name: "INCIDENT DETAILS",
+                    name: "EVENT DETAILS",
                     value: `\nType: ${misconductType === 'other' ? otherMisconductType : misconductType}\n` +
                         `Date: ${document.getElementById('arrIncidentDate').value}\n` +
                         `Location: ${document.getElementById('arrLocation').value}\n`,

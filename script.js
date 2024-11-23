@@ -117,9 +117,9 @@ document.getElementById('misconductType').addEventListener('change', function() 
 
 // Set up form when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    loadOfficers().then( () => {
+    loadOfficers()
 
-    loadTrainers();});
+    loadTrainers();
     
     // Set default datetime to now
     const now = new Date();

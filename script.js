@@ -105,8 +105,8 @@ function loadTrainers() {
 
 
 // Handle misconduct type selection
-document.getElementById('misconductType').addEventListener('change', function() {
-    const otherInput = document.getElementById('otherMisconductType');
+document.getElementById('arrIncidentType').addEventListener('change', function() {
+    const otherInput = document.getElementById('arrOtherIncidentType');
     if (this.value === 'other') {
         otherInput.style.display = 'block';
         otherInput.required = true;
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set default datetime to now
     const now = new Date();
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    document.getElementById('incidentDate').value = now.toISOString().slice(0, 16);
+    document.getElementById('arrIncidentDate').value = now.toISOString().slice(0, 16);
 });
 
 

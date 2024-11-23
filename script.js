@@ -103,6 +103,7 @@ function loadTrainers() {
     });
 }
 
+
 // Handle misconduct type selection
 document.getElementById('misconductType').addEventListener('change', function() {
     const otherInput = document.getElementById('otherMisconductType');

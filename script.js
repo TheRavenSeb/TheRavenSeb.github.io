@@ -89,8 +89,7 @@ function loadTrainers() {
     defaultOption.value = '';
     defaultOption.textContent = '-- Select a Trainer --';
     select.appendChild(defaultOption);
-    plaintiffSelect.appendChild(defaultOption.cloneNode(true)); // Add same default option to plaintiff select
-    defendantSelect.appendChild(defaultOption.cloneNode(true)); // Add same default option to defendant select
+    
 
     TRAINERS.forEach(trainer => {
         const option = document.createElement('option');

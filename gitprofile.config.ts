@@ -59,7 +59,7 @@ const CONFIG = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: 'TheRavenSeb',
-    website: 'https://www.theravenseb.site',
+    website: 'https://theravenseb.site',
     phone: '',
     email: 'CThomas985@outlook.com',
   },
@@ -107,7 +107,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'manchester community collage',
-      degree: 'AS in Computer science: Extended Reality(XR',
+      degree: 'AS in Computer science: Extended Reality(XR)',
       from: '2024',
       to: 'Present',
     },
@@ -193,12 +193,7 @@ const CONFIG = {
     },
   },
 
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  
 
   enablePWA: true,
 };
